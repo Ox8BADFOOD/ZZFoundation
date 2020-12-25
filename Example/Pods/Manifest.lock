@@ -1,0 +1,23 @@
+PODS:
+  - Kiwi (3.0.0)
+  - ZZFoundation (0.1.0)
+
+DEPENDENCIES:
+  - Kiwi
+  - ZZFoundation (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Kiwi
+
+EXTERNAL SOURCES:
+  ZZFoundation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
+  ZZFoundation: 255f65cf7224f23b50c796cfbb32cfc96fab8274
+
+PODFILE CHECKSUM: 0add32887ca0be5d564b931217e4042cda8f56b5
+
+COCOAPODS: 1.9.3
