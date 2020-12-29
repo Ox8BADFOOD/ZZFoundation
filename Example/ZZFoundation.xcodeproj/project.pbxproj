@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2B1A4D4147F0AF49D70496DC /* Pods_ZZFoundation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0395307505955BBCF6A4A24D /* Pods_ZZFoundation_Tests.framework */; };
+		50543AD9259A18EB00E96479 /* NSString+ZZExTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50543AD8259A18EB00E96479 /* NSString+ZZExTest.m */; };
+		505478422596352F00EB1172 /* NSString+ZZRangeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 505478412596352F00EB1172 /* NSString+ZZRangeTest.m */; };
+		5054784D25963E9A00EB1172 /* NSString+ZZRegexTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5054784C25963E9A00EB1172 /* NSString+ZZRegexTest.m */; };
+		50563647259B12FC004C7FCF /* NSDate+ZZExTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50563646259B12FC004C7FCF /* NSDate+ZZExTest.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -20,7 +24,7 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6003F5BC195388D20070C39A /* NSString+ZZPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* NSString+ZZPathTests.m */; };
 		64B7830872AEE1932A0945C8 /* Pods_ZZFoundation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742D2D17DA601F8B16B6E9FA /* Pods_ZZFoundation_Example.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
@@ -39,6 +43,10 @@
 /* Begin PBXFileReference section */
 		0395307505955BBCF6A4A24D /* Pods_ZZFoundation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZFoundation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EAEC7ADAA0051551EC0B07 /* Pods-ZZFoundation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZFoundation_Example.debug.xcconfig"; path = "Target Support Files/Pods-ZZFoundation_Example/Pods-ZZFoundation_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		50543AD8259A18EB00E96479 /* NSString+ZZExTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZZExTest.m"; sourceTree = "<group>"; };
+		505478412596352F00EB1172 /* NSString+ZZRangeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZZRangeTest.m"; sourceTree = "<group>"; };
+		5054784C25963E9A00EB1172 /* NSString+ZZRegexTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZZRegexTest.m"; sourceTree = "<group>"; };
+		50563646259B12FC004C7FCF /* NSDate+ZZExTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZZExTest.m"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ZZFoundation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZFoundation_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,7 +64,7 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		6003F5BB195388D20070C39A /* NSString+ZZPathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZZPathTests.m"; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		742D2D17DA601F8B16B6E9FA /* Pods_ZZFoundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZZFoundation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +163,11 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
+				6003F5BB195388D20070C39A /* NSString+ZZPathTests.m */,
+				505478412596352F00EB1172 /* NSString+ZZRangeTest.m */,
+				5054784C25963E9A00EB1172 /* NSString+ZZRegexTest.m */,
+				50543AD8259A18EB00E96479 /* NSString+ZZExTest.m */,
+				50563646259B12FC004C7FCF /* NSDate+ZZExTest.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -234,7 +246,11 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "bymiracles@163.com";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 977DUNW73S;
+					};
 					6003F5AD195388D20070C39A = {
+						DevelopmentTeam = 977DUNW73S;
 						TestTargetID = 6003F589195388D20070C39A;
 					};
 				};
@@ -381,7 +397,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				6003F5BC195388D20070C39A /* NSString+ZZPathTests.m in Sources */,
+				505478422596352F00EB1172 /* NSString+ZZRangeTest.m in Sources */,
+				50563647259B12FC004C7FCF /* NSDate+ZZExTest.m in Sources */,
+				50543AD9259A18EB00E96479 /* NSString+ZZExTest.m in Sources */,
+				5054784D25963E9A00EB1172 /* NSString+ZZRegexTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +521,7 @@
 			baseConfigurationReference = 43EAEC7ADAA0051551EC0B07 /* Pods-ZZFoundation_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 977DUNW73S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZZFoundation/ZZFoundation-Prefix.pch";
 				INFOPLIST_FILE = "ZZFoundation/ZZFoundation-Info.plist";
@@ -517,6 +538,7 @@
 			baseConfigurationReference = D21B953AED72739FA73F9573 /* Pods-ZZFoundation_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 977DUNW73S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZZFoundation/ZZFoundation-Prefix.pch";
 				INFOPLIST_FILE = "ZZFoundation/ZZFoundation-Info.plist";
@@ -533,6 +555,7 @@
 			baseConfigurationReference = B1FA23B46676C8044117B258 /* Pods-ZZFoundation_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 977DUNW73S;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -558,6 +581,7 @@
 			baseConfigurationReference = CFB9F0CDCDE27F996E0D538E /* Pods-ZZFoundation_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 977DUNW73S;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
