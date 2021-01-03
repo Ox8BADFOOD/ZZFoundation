@@ -8,5 +8,7 @@
 #ifndef ZZFoundation_Date_h
 #define ZZFoundation_Date_h
 
-
+#import "NSDate+ZZEx.h"
+#import "NSDate+ZZTimeStamp.h"
+#import "NSDate+ZZChineseCalendar.h"
 #endif /* ZZFoundation_Date_h */

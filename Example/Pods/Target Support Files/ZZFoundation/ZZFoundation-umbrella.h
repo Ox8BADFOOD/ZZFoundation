@@ -14,6 +14,7 @@
 #import "NSMutableArray+ZZEx.h"
 #import "NSDate+ZZEx.h"
 #import "ZZFoundation_Date.h"
+#import "NSFileManager+ZZEx.h"
 #import "NSObjec+PropertiesVarMethod.h"
 #import "NSObject+ZZSwizzle.h"
 #import "NSString+ZZPath.h"

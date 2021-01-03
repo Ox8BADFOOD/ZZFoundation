@@ -9,4 +9,5 @@
 #define ZZFoundation_h
 
 #import "ZZFoundation_String.h"
+#import "ZZFoundation_Date.h"
 #endif /* ZZFoundation_h */

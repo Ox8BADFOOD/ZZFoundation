@@ -1,13 +1,28 @@
 //
-//  NSString+Ex.m
+//  NSString+ZZEx.m
 //  Kiwi
 //
 //  Created by Max on 2020/12/28.
 //
 
-#import "NSString+Ex.h"
+#import "NSString+ZZEx.h"
 
 @implementation NSString (Ex)
+
+
+/// 格式化字符串创建
+/// @param format 格式化
+NSString * ZZString(NSString *format, ...)
+{
+    va_list ap;
+    va_start (ap, format);
+
+    NSString *body = [[NSString alloc] initWithFormat:format arguments:ap];
+
+    va_end (ap);
+
+    return body;
+}
 
 -(NSString *)ZZSlice:(NSInteger)star{
     return [self substringFromIndex:star];
@@ -22,7 +37,17 @@
     return [self ZZSlice:star end:star + length];
 }
 
--(NSString *)ZZReplace:(NSString *)replaceStr{
-    [self stringByReplacingCharactersInRange:<#(NSRange)#> withString:<#(nonnull NSString *)#>]
+-(NSArray *)ZZSplit:(NSString *)separator{
+    return [self componentsSeparatedByString:separator];
+};
+
+-(NSString *)ZZReplace:(NSString *)aStr with:(NSString *)bStr{
+    NSMutableString *muStr = [self mutableCopy];
+    NSArray *ranges = [muStr ZZRangeOfSubString:aStr];
+    for (NSValue *value  in ranges) {
+        NSRange range = [value rangeValue];
+        muStr = [[muStr stringByReplacingCharactersInRange:range withString:bStr] mutableCopy];
+    }
+    return muStr;
 }
 @end

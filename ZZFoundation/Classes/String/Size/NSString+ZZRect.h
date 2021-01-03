@@ -1,5 +1,5 @@
 //
-//  NSString+ZZSize.h
+//  NSString+ZZRect.h
 //  ruibeikang
 //
 //  Created by Apple on 23/7/19.
@@ -10,9 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSString (ZZSize)
--(CGFloat (^)(CGFloat width,UIFont *font))ZZHeigh;
--(CGFloat (^)(CGFloat heigh,UIFont *font))ZZWidth;
+@interface NSString (ZZRect)
+
+/// 返回block，block的参数是width和font，block的返回值是计算出来的高度
+-(CGFloat (^)(CGFloat width,UIFont *font))ZZRectHeigh;
+
+/// 返回block，block的参数是height和font，block的返回值是计算出来的宽度
+-(CGFloat (^)(CGFloat heigh,UIFont *font))ZZRectWidth;
 @end
 
 NS_ASSUME_NONNULL_END
