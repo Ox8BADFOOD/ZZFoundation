@@ -11,6 +11,10 @@
 
 SPEC_BEGIN(StringEx)
 NSString * emptyStr = @"";
+NSString * emptyStr2 = @" ";
+NSString * emptyStr3 = @"    ";
+NSString * emptyStr4 = @"\n";
+
 NSString * chinese = @"你莫走";
 NSString * chineseCharacter = @"你好，李银河！";
 NSString * num = @"1232131321";
@@ -18,6 +22,14 @@ NSString * num = @"1232131321";
 NSString * characterNum = @"Zz1232131321";
 
 describe(@"split", ^{
+    it(@"emptyStr should passCheck", ^{
+        [[theValue([emptyStr ZZEmpty]) should] beYes];
+//        [[theValue([emptyStr1 ZZEmpty]) should] beYes];
+        [[theValue([emptyStr2 ZZEmpty]) should] beYes];
+        [[theValue([emptyStr3 ZZEmpty]) should] beYes];
+        [[theValue([emptyStr4 ZZEmpty]) should] beYes];
+    });
+    
     it(@"emptyStr should have 1 component", ^{
         [[[emptyStr ZZSplit:@"3"] should] haveCountOf:1];
     });

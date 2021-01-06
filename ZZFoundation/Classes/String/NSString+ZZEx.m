@@ -24,6 +24,29 @@ NSString * ZZString(NSString *format, ...)
     return body;
 }
 
+/**
+ *  判断字符串是否为空
+ *
+ *  @return YES 是 NO 不是
+ */
+- (BOOL)ZZEmpty{
+    if (!self) {
+        return true;
+    } else {
+        //A character set containing only the whitespace characters space (U+0020) and tab (U+0009) and the newline and nextline characters (U+000A–U+000D, U+0085).
+        NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+         
+        //Returns a new string made by removing from both ends of the receiver characters contained in a given character set.
+        NSString *trimedString = [self stringByTrimmingCharactersInSet:set];
+         
+        if ([trimedString length] == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
 -(NSString *)ZZSlice:(NSInteger)star{
     return [self substringFromIndex:star];
 };

@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 FOUNDATION_EXPORT NSString * ZZString(NSString *format, ...);
 
 
+/// 空字符串 包含 @“”，@“  ”，@“ \n(回车)”
+- (BOOL)ZZEmpty;
+
 /// 提取字符串的片断，返回index开始到最后
 /// @param index 开始的下标
 -(NSString *)ZZSlice:(NSInteger)index;
