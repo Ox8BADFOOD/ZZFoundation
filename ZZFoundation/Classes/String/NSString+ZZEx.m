@@ -64,6 +64,20 @@ NSString * ZZString(NSString *format, ...)
     return [self componentsSeparatedByString:separator];
 };
 
+- (NSArray*)ZZRangeOfSubString:(NSString*)subStr{
+    NSMutableArray *rangeArray = [NSMutableArray array];
+    NSString*string1 = [self stringByAppendingString:subStr];
+    NSString *temp;
+    for(int i =0; i < self.length; i ++) {
+        temp = [string1 substringWithRange:NSMakeRange(i, subStr.length)];
+        if ([temp isEqualToString:subStr]) {
+            NSRange range = {i,subStr.length};
+            [rangeArray addObject: [NSValue valueWithRange:range]];
+        }
+    }
+    return rangeArray;
+}
+
 -(NSString *)ZZReplace:(NSString *)aStr with:(NSString *)bStr{
     NSMutableString *muStr = [self mutableCopy];
     NSArray *ranges = [muStr ZZRangeOfSubString:aStr];

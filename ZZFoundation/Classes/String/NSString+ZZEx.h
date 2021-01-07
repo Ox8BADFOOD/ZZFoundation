@@ -6,7 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <NSString+ZZRange.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -38,7 +37,12 @@ FOUNDATION_EXPORT NSString * ZZString(NSString *format, ...);
 -(NSArray *)ZZSplit:(NSString *)separator;
 
 
-/// 替换字符串
+
+/// 遍历字符串返回子字符串range的数组集合
+/// @param subStr 匹配的子字符串
+- (NSArray*)ZZRangeOfSubString:(NSString*)subStr;
+
+/// 用b替换字符串中所有的a
 /// @param aStr 匹配的字符串
 /// @param bStr 替换的字符串
 -(NSString *)ZZReplace:(NSString *)aStr with:(NSString *)bStr;

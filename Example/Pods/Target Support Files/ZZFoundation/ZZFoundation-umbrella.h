@@ -22,10 +22,9 @@
 #import "ZZSwizzle.h"
 #import "NSString+ZZPath.h"
 #import "NSString+ZZEx.h"
+#import "NSString+ZZRect.h"
 #import "NSString+ZZRegex.h"
 #import "ZZSecurity.h"
-#import "NSString+ZZRect.h"
-#import "NSString+ZZRange.h"
 #import "ZZFoundation_String.h"
 #import "ZZFoundation.h"
 

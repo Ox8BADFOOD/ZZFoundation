@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否英文小写
 - (BOOL)ZZCheckSmallLetter;
 
-/// 有效的密码
+/// 有效的密码 长度为6到20位,包含字母、数字、不能为中文
 - (BOOL)ZZCheckValidPassword;
 
 /// 是不是全为空格

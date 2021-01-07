@@ -18,7 +18,7 @@ describe(@"StringEx", ^{
   context(@"of cache", ^{
       __block id value = nil;
       beforeEach(^{
-          value = [@"fileName" ZZCacheDir];
+          value = [@"fileName" ZZDirCache];
       });
       
       afterEach(^{

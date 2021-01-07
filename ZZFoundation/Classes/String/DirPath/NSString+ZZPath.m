@@ -10,21 +10,21 @@
 
 @implementation NSString (ZZPath)
 ///MARK: - 获得目录路径
-- (instancetype)ZZCacheDir{
+- (instancetype)ZZDirCache{
 	// 1.获取caches目录
 	NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
 	// 2.生成绝对路径
 	return [path stringByAppendingPathComponent:[self lastPathComponent]];
 }
 
-- (instancetype)ZZDocDir{
+- (instancetype)ZZDirDoc{
 	// 1.获取caches目录
 	NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 	// 2.生成绝对路径
 	return [path stringByAppendingPathComponent:[self lastPathComponent]];
 }
 
-- (instancetype)ZZTempDir{
+- (instancetype)ZZDirTemp{
 	// 1.获取caches目录
 	NSString *path = NSTemporaryDirectory();
 	// 2.生成绝对路径

@@ -11,11 +11,11 @@
 @interface NSString (ZZPath)
 
 /// 拼接成cache目录
-- (instancetype)ZZCacheDir;
+- (instancetype)ZZDirCache;
 
 /// 拼接成Document目录
-- (instancetype)ZZDocDir;
+- (instancetype)ZZDirDoc;
 
 /// 拼接成Temp目录
-- (instancetype)ZZTempDir;
+- (instancetype)ZZDirTemp;
 @end
