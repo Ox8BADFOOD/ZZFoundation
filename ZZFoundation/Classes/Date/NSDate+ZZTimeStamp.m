@@ -10,10 +10,13 @@
 @implementation NSDate (ZZTimeStamp)
 
 /// 获取当前时间戳
++(NSTimeInterval)ZZTimeStamp{
+    return [[NSDate date] timeIntervalSince1970];
+};
+
+/// Date转时间戳
 -(NSTimeInterval)ZZTimeStamp{
-    NSDate *date = [NSDate date];
-    NSTimeInterval stamp = [date timeIntervalSince1970];
-    return stamp;
+    return [self timeIntervalSince1970];
 };
 
 

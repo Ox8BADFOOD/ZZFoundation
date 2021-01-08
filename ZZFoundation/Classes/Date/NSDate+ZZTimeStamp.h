@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSDate (ZZTimeStamp)
 
 /// 获取当前时间戳
++(NSTimeInterval)ZZTimeStamp;
+
+/// Date转时间戳
 -(NSTimeInterval)ZZTimeStamp;
 
 
