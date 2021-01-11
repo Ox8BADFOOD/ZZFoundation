@@ -78,6 +78,9 @@
 		5082D63125AC5DA1005B836B /* ZZClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5082D62E25AC5DA1005B836B /* ZZClass.m */; };
 		5082D63225AC5DA1005B836B /* ZZClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 5082D62F25AC5DA1005B836B /* ZZClass.h */; };
 		5082D63325AC5DA1005B836B /* ZZWeakify.h in Headers */ = {isa = PBXBuildFile; fileRef = 5082D63025AC5DA1005B836B /* ZZWeakify.h */; };
+		509D165D25AC9C08000D37DB /* ZZClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5082D62E25AC5DA1005B836B /* ZZClass.m */; };
+		509D165E25AC9C0E000D37DB /* ZZClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 5082D62F25AC5DA1005B836B /* ZZClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		509D165F25AC9C12000D37DB /* ZZWeakify.h in Headers */ = {isa = PBXBuildFile; fileRef = 5082D63025AC5DA1005B836B /* ZZWeakify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52F5AFEBD9637164EBF1087C93B5181E /* KWMessageSpying.h in Headers */ = {isa = PBXBuildFile; fileRef = BC24CAEB651A84A792513E1DC67AAD55 /* KWMessageSpying.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54280A8B738CC8BEB24EB56252A1675A /* NSDateFormatter+ZZEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B15A1E91CD739D1501F1B1A828599C4 /* NSDateFormatter+ZZEx.m */; };
 		54723DEC62D2D1D148690B356B1537D5 /* ZZSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4AD003AC0085139DB53FD5A503AE93 /* ZZSwizzle.m */; };
@@ -1185,6 +1188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3EAE0A63FBAAE924844CEB913F116F /* NSArray+ZZEx.h in Headers */,
+				509D165F25AC9C12000D37DB /* ZZWeakify.h in Headers */,
 				B20891F93F9B0A1A207D732207667A23 /* NSDate+ZZChineseCalendar.h in Headers */,
 				96580E9213B7E1B37FA8978D62999323 /* NSDate+ZZEx.h in Headers */,
 				D9B90033B6C21DD045F19C68D8ED0650 /* NSDate+ZZTimeStamp.h in Headers */,
@@ -1198,6 +1202,7 @@
 				64597438AFAD7E789D2E58ACD46B25E4 /* NSString+ZZRegex.h in Headers */,
 				F4FC4880BB74FF7ADAC327E7C4C05484 /* ZZFoundation-umbrella.h in Headers */,
 				78B18D7DE78C2E61BBD0F10E91976204 /* ZZFoundation.h in Headers */,
+				509D165E25AC9C0E000D37DB /* ZZClass.h in Headers */,
 				59B3EA379E86112B458CD68F6BF7778C /* ZZFoundation_Date.h in Headers */,
 				62F238E254D6AB3F6459A823DCAD4C02 /* ZZFoundation_String.h in Headers */,
 				63989399877DEADF630303691845A3BE /* ZZSecurity.h in Headers */,
@@ -1471,6 +1476,7 @@
 				5D87EC69D373809FAD24806067B783FC /* NSObjec+PropertiesVarMethod.m in Sources */,
 				7003D06B4FBB69D2A273012D0ABCAA38 /* NSString+ZZEx.m in Sources */,
 				36D3B4998B4B1CE98E2CCEF774AE6F14 /* NSString+ZZPath.m in Sources */,
+				509D165D25AC9C08000D37DB /* ZZClass.m in Sources */,
 				507A958C723F8C99B4364958A4AE5B94 /* NSString+ZZRect.m in Sources */,
 				47DFF54C190A64B94EA75A56B9E4C7C4 /* NSString+ZZRegex.m in Sources */,
 				4C33B373CBC1245603B609C75F44D83E /* ZZFoundation-dummy.m in Sources */,
