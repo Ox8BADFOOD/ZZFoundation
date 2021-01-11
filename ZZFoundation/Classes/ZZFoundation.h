@@ -7,6 +7,8 @@
 
 #ifndef ZZFoundation_h
 #define ZZFoundation_h
+#import "ZZClass.h"
+#import "ZZWeakify.h"
 
 #import "ZZFoundation_String.h"
 #import "ZZFoundation_Date.h"

@@ -12,6 +12,8 @@
 		505478422596352F00EB1172 /* NSString+ZZRangeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 505478412596352F00EB1172 /* NSString+ZZRangeTest.m */; };
 		5054784D25963E9A00EB1172 /* NSString+ZZRegexTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5054784C25963E9A00EB1172 /* NSString+ZZRegexTest.m */; };
 		50563647259B12FC004C7FCF /* NSDate+ZZExTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 50563646259B12FC004C7FCF /* NSDate+ZZExTest.m */; };
+		5082D62B25AC5BBF005B836B /* ZZSwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082D62A25AC5BBF005B836B /* ZZSwiftClass.swift */; };
+		5082D62C25AC5C81005B836B /* ZZSwiftClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082D62A25AC5BBF005B836B /* ZZSwiftClass.swift */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -47,6 +49,8 @@
 		505478412596352F00EB1172 /* NSString+ZZRangeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZZRangeTest.m"; sourceTree = "<group>"; };
 		5054784C25963E9A00EB1172 /* NSString+ZZRegexTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZZRegexTest.m"; sourceTree = "<group>"; };
 		50563646259B12FC004C7FCF /* NSDate+ZZExTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZZExTest.m"; sourceTree = "<group>"; };
+		5082D62925AC5BBE005B836B /* ZZFoundation_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZZFoundation_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		5082D62A25AC5BBF005B836B /* ZZSwiftClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZSwiftClass.swift; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* ZZFoundation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZFoundation_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,9 +145,11 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* ZZViewController.h */,
 				6003F5A6195388D20070C39A /* ZZViewController.m */,
+				5082D62A25AC5BBF005B836B /* ZZSwiftClass.swift */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				5082D62925AC5BBE005B836B /* ZZFoundation_Example-Bridging-Header.h */,
 			);
 			name = "Example for ZZFoundation";
 			path = ZZFoundation;
@@ -248,6 +254,7 @@
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = 977DUNW73S;
+						LastSwiftMigration = 1170;
 					};
 					6003F5AD195388D20070C39A = {
 						DevelopmentTeam = 977DUNW73S;
@@ -387,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5082D62B25AC5BBF005B836B /* ZZSwiftClass.swift in Sources */,
 				6003F59E195388D20070C39A /* ZZAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* ZZViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
@@ -397,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5082D62C25AC5C81005B836B /* ZZSwiftClass.swift in Sources */,
 				6003F5BC195388D20070C39A /* NSString+ZZPathTests.m in Sources */,
 				505478422596352F00EB1172 /* NSString+ZZRangeTest.m in Sources */,
 				50563647259B12FC004C7FCF /* NSDate+ZZExTest.m in Sources */,
@@ -521,13 +530,17 @@
 			baseConfigurationReference = 43EAEC7ADAA0051551EC0B07 /* Pods-ZZFoundation_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 977DUNW73S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZZFoundation/ZZFoundation-Prefix.pch";
 				INFOPLIST_FILE = "ZZFoundation/ZZFoundation-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZZFoundation/ZZFoundation_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -538,13 +551,16 @@
 			baseConfigurationReference = D21B953AED72739FA73F9573 /* Pods-ZZFoundation_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 977DUNW73S;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ZZFoundation/ZZFoundation-Prefix.pch";
 				INFOPLIST_FILE = "ZZFoundation/ZZFoundation-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZZFoundation/ZZFoundation_Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -554,6 +570,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B1FA23B46676C8044117B258 /* Pods-ZZFoundation_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 977DUNW73S;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -580,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CFB9F0CDCDE27F996E0D538E /* Pods-ZZFoundation_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 977DUNW73S;
 				FRAMEWORK_SEARCH_PATHS = (

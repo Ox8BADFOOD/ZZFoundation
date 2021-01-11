@@ -23,6 +23,7 @@ NSString * characterNum = @"Zz1232131321";
 
 describe(@"split", ^{
     it(@"emptyStr should passCheck", ^{
+        
         [[theValue([emptyStr ZZEmpty]) should] beYes];
 //        [[theValue([emptyStr1 ZZEmpty]) should] beYes];
         [[theValue([emptyStr2 ZZEmpty]) should] beYes];

@@ -1,6 +1,6 @@
 PODS:
   - Kiwi (3.0.0)
-  - ZZFoundation (0.1.0)
+  - ZZFoundation (0.1.2)
 
 DEPENDENCIES:
   - Kiwi
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
-  ZZFoundation: 8eb8a86db13fc12217dcf3b92e94914c4ae7d829
+  ZZFoundation: 6a95397beaab8bf75160a004c21e8d2c7f769473
 
 PODFILE CHECKSUM: 0add32887ca0be5d564b931217e4042cda8f56b5
 

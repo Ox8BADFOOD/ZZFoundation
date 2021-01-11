@@ -26,7 +26,9 @@
 #import "NSString+ZZRegex.h"
 #import "ZZSecurity.h"
 #import "ZZFoundation_String.h"
+#import "ZZClass.h"
 #import "ZZFoundation.h"
+#import "ZZWeakify.h"
 
 FOUNDATION_EXPORT double ZZFoundationVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZZFoundationVersionString[];

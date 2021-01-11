@@ -7,7 +7,8 @@
 //
 
 #import "ZZViewController.h"
-
+#import "ZZFoundation_Example-Swift.h"
+#import <ZZFoundation/ZZFoundation.h>
 @interface ZZViewController ()
 
 @end
@@ -18,6 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"%@",zz_getObjClass([ZZSwiftClass new]));
 }
 
 - (void)didReceiveMemoryWarning
