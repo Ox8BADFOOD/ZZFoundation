@@ -1,6 +1,8 @@
 PODS:
+  - Aspects (1.4.1)
   - Kiwi (3.0.0)
-  - ZZFoundation (0.1.2)
+  - ZZFoundation (0.1.4):
+    - Aspects (~> 1.4.1)
 
 DEPENDENCIES:
   - Kiwi
@@ -8,6 +10,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Aspects
     - Kiwi
 
 EXTERNAL SOURCES:
@@ -15,9 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
-  ZZFoundation: 6a95397beaab8bf75160a004c21e8d2c7f769473
+  ZZFoundation: 91e9ee45372135b8fc4d10a7dd76cc6c164d4d51
 
 PODFILE CHECKSUM: 0add32887ca0be5d564b931217e4042cda8f56b5
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1
