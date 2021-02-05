@@ -12,5 +12,6 @@
 #import "NSString+ZZPath.h"
 #import "NSString+ZZRegex.h"
 #import "NSString+ZZRect.h"
+#import "NSString+ZZAttribute.h"
 
 #endif /* ZZFoundation_String_h */

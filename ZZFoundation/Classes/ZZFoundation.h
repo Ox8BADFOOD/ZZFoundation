@@ -14,4 +14,6 @@
 #import "ZZFoundation_Date.h"
 #import "ZZSwizzle.h"
 
+#import "NSData+ZZConvert.h"
+
 #endif /* ZZFoundation_h */

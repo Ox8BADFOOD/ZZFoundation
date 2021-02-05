@@ -9,7 +9,7 @@
 #define ZZFoundation_BaseTool_h
 
 #import "ZZClass.h"
-#import "ZZWeakify.h"
+#import <ZZFoundation/ZZWeakify.h>
 #import "ZZFileManager.h"
 
 #endif /* ZZFoundation_BaseTool_h */

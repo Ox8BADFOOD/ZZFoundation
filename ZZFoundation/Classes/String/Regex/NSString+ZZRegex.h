@@ -13,54 +13,57 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (ZZRegex)
 
 
+/// 是否是有效的字符串 @"null"无效
+-(BOOL)zz_validateStr;
+
 /// 是不是阿拉伯数字或小数点
--(BOOL)ZZCheckAllNumber;
+-(BOOL)zz_checkAllNumber;
 
 /// 是否是中文
-- (BOOL)ZZCheckAllChinese;
+- (BOOL)zz_checkAllChinese;
 
 /// 是否全英文
-- (BOOL)ZZCheckAllEnglish;
+- (BOOL)zz_checkAllEnglish;
 
 /// 是否包含英文
-- (BOOL)ZZCheckContainEnglish;
+- (BOOL)zz_checkContainEnglish;
 
 
 /// 是否英文大写
-- (BOOL)ZZCheckCapitalLetter;
+- (BOOL)zz_checkCapitalLetter;
 
 /// 是否英文小写
-- (BOOL)ZZCheckSmallLetter;
+- (BOOL)zz_checkSmallLetter;
 
 /// 有效的密码 长度为6到20位,包含字母、数字、不能为中文
-- (BOOL)ZZCheckValidPassword;
+- (BOOL)zz_checkValidPassword;
 
 /// 是不是全为空格
-- (BOOL)ZZCheckAllSpace;
+- (BOOL)zz_checkAllSpace;
 /// 包含一个以上空格
-- (BOOL)ZZCheckContainSpace;
+- (BOOL)zz_checkContainSpace;
 /// 是不是url
--(BOOL)ZZCheckUrl;
+-(BOOL)zz_checkUrl;
 
 /// 有效的人名 姓名校验规则(最多5个汉字)
-- (BOOL)ZZCheckPersonName;
+- (BOOL)zz_checkPersonName;
 
 /// 昵称 长度2-10
-- (BOOL)ZZCheckNickName;
+- (BOOL)zz_checkNickName;
 /// 是不是电话号码
-- (BOOL)ZZCheckPhoneNumber;
+- (BOOL)zz_checkPhoneNumber;
 
 
 ///  单位名称校验规则(20个汉字)
-- (BOOL)ZZCheckCompanyName;
+- (BOOL)zz_checkCompanyName;
 /// 验证码
-- (BOOL)ZZCheckVerifyCode:(int)length;
+- (BOOL)zz_checkVerifyCode:(int)length;
 
 /// 身份证
--(BOOL)ZZCheckIDCardNumber:(NSString *)value;
+-(BOOL)zz_checkIDCardNumber:(NSString *)value;
 
 /// 邮政编码
-- (BOOL)ZZCheckZipcode;
+- (BOOL)zz_checkZipcode;
 
 
 @end

@@ -10,52 +10,64 @@
 
 @implementation NSString (ZZRegex)
 
-- (BOOL)ZZValidateByRegex:(NSString *)regex {
+
+-(BOOL)zz_validateStr{
+    if (!self || self.length <= 0) {
+        return NO;
+    }
+    if ([@"null" isEqualToString:self]
+        || [@"\"null\"" isEqualToString:self]) {
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)zz_validateByRegex:(NSString *)regex {
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
     return [pre evaluateWithObject:self];
 }
 
--(BOOL)ZZCheckAllNumber{
+-(BOOL)zz_checkAllNumber{
     if (self.length == 0)
     return NO;
     NSString *regex = @"^[0-9]+([.]{0,1}[0-9]+){0,1}$";
-    return [self ZZValidateByRegex:regex];
+    return [self zz_validateByRegex:regex];
 }
 
 //是否是中文
-- (BOOL)ZZCheckAllChinese {
+- (BOOL)zz_checkAllChinese {
     NSString *chineseRegex = @"^[\\u4e00-\\u9fa5]+$";
-    return [self ZZValidateByRegex:chineseRegex];
+    return [self zz_validateByRegex:chineseRegex];
 }
 
-- (BOOL)ZZCheckAllEnglish{
+- (BOOL)zz_checkAllEnglish{
 //    NSAssert(false, @"没有实现");
     return false;
 };
 
-- (BOOL)ZZCheckContainEnglish {
+- (BOOL)zz_checkContainEnglish {
     //长度为6到20位,包含字母、数字、不能为中文
     NSString *regex2 = @"^?=.*[A-Za-z]$";
-    return [self ZZValidateByRegex:regex2];
+    return [self zz_validateByRegex:regex2];
 }
 
 // 是否英文大写
-- (BOOL)ZZCheckCapitalLetter{
+- (BOOL)zz_checkCapitalLetter{
     NSString *regex = @"^[A-Z]+$";
-    return [self ZZValidateByRegex:regex];
+    return [self zz_validateByRegex:regex];
 };
 
 // 是否英文小写
-- (BOOL)ZZCheckSmallLetter{
+- (BOOL)zz_checkSmallLetter{
     NSString *regex = @"^[a-z]+$";
-    return [self ZZValidateByRegex:regex];
+    return [self zz_validateByRegex:regex];
 };
 
 //有效的密码
-- (BOOL)ZZCheckValidPassword {
+- (BOOL)zz_checkValidPassword {
     //长度为6到20位,包含字母、数字、不能为中文
     NSString *regex2 = @"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$";
-    return [self ZZValidateByRegex:regex2];
+    return [self zz_validateByRegex:regex2];
     /**
      (?![0-9]+$) 预测该位置后面不全是数字
      (?![a-zA-Z]+$) 预测该位置后面不全是字母
@@ -64,53 +76,53 @@
     */
 }
 
-- (BOOL)ZZCheckAllSpace {
+- (BOOL)zz_checkAllSpace {
     NSString *regex = @"^[ ]+$";
-    return [self ZZValidateByRegex:regex];
+    return [self zz_validateByRegex:regex];
 }
 
-- (BOOL)ZZCheckContainSpace{
+- (BOOL)zz_checkContainSpace{
     return [self containsString:@" "];
 }
 
--(BOOL)ZZCheckUrl{
+-(BOOL)zz_checkUrl{
     NSString *urlRegex = @"(https|http|ftp|rtsp|igmp|file|rtspt|rtspu)://((((25[0-5]|2[0-4]\\d|1?\\d?\\d)\\.){3}(25[0-5]|2[0-4]\\d|1?\\d?\\d))|([0-9a-z_!~*'()-]*\\.?))([0-9a-z][0-9a-z-]{0,61})?[0-9a-z]\\.([a-z]{2,6})(:[0-9]{1,4})?([a-zA-Z/?_=]*)\\.\\w{1,5}";
-    return [self ZZValidateByRegex:urlRegex];
+    return [self zz_validateByRegex:urlRegex];
 }
 
 /**
  有效的人名 姓名校验规则(最多5个汉字)
  */
-- (BOOL)ZZCheckPersonName{
+- (BOOL)zz_checkPersonName{
     NSString *personName = @"^[\u4e00-\u9fa5_a-zA-Z0-9]{2,5}$";
-    return [self ZZValidateByRegex:personName];
+    return [self zz_validateByRegex:personName];
 }
 
 //昵称 长度2-10
-- (BOOL)ZZCheckNickName {
+- (BOOL)zz_checkNickName {
     NSString *nicRegex = @"^[\u4e00-\u9fa5_a-zA-Z0-9]{2,10}$";
-    return [self ZZValidateByRegex:nicRegex];
+    return [self zz_validateByRegex:nicRegex];
 }
 
 // 单位名称校验规则(20个汉字)
-- (BOOL)ZZCheckCompanyName{
+- (BOOL)zz_checkCompanyName{
     NSString *companyName = @"^[\u4e00-\u9fa5_a-zA-Z0-9]{2,20}$";
-    return [self ZZValidateByRegex:companyName];
+    return [self zz_validateByRegex:companyName];
 }
 
 //是不是电话号码
-- (BOOL)ZZCheckPhoneNumber{
+- (BOOL)zz_checkPhoneNumber{
     NSString *regex = @"^(1[3-9][0-9])\\d{8}$";
-    return [self ZZValidateByRegex:regex];
+    return [self zz_validateByRegex:regex];
 };
 
 //验证码
-- (BOOL)ZZCheckVerifyCode:(int)length{
+- (BOOL)zz_checkVerifyCode:(int)length{
     NSString *regex = [NSString stringWithFormat:@"^[0-9]{%d}",length];
-    return [self ZZValidateByRegex:regex];
+    return [self zz_validateByRegex:regex];
 }
 
--(BOOL)ZZCheckIDCardNumber:(NSString *)value{
+-(BOOL)zz_checkIDCardNumber:(NSString *)value{
     value = [value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSInteger length =0;
     if (!value) {
@@ -209,8 +221,8 @@
 }
 
 //邮政编码
-- (BOOL)ZZCheckZipcode{
+- (BOOL)zz_checkZipcode{
     NSString *regex = @"^[0-9]{6}";
-    return [self ZZValidateByRegex:regex];
+    return [self zz_validateByRegex:regex];
 };
 @end
