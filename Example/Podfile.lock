@@ -1,8 +1,12 @@
 PODS:
   - Aspects (1.4.1)
+  - CocoaLumberjack (3.7.0):
+    - CocoaLumberjack/Core (= 3.7.0)
+  - CocoaLumberjack/Core (3.7.0)
   - Kiwi (3.0.0)
   - ZZFoundation (0.1.4):
     - Aspects (~> 1.4.1)
+    - CocoaLumberjack
 
 DEPENDENCIES:
   - Kiwi
@@ -11,6 +15,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Aspects
+    - CocoaLumberjack
     - Kiwi
 
 EXTERNAL SOURCES:
@@ -19,8 +24,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
-  ZZFoundation: 91e9ee45372135b8fc4d10a7dd76cc6c164d4d51
+  ZZFoundation: 4a988d2f966809e44c3f474ddef7419b9261a5ea
 
 PODFILE CHECKSUM: 0add32887ca0be5d564b931217e4042cda8f56b5
 

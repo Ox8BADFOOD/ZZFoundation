@@ -16,4 +16,5 @@
 
 #import "NSData+ZZConvert.h"
 
+#import "NSObject+ZZResp.h"
 #endif /* ZZFoundation_h */
