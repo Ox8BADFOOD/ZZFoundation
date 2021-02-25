@@ -14,6 +14,32 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
 @implementation NSDate (ZZEx)
 
 
+- (NSDate *)zz_ignoreTime{
+     //get seconds since 1970
+     NSTimeInterval interval = [self timeIntervalSince1970];
+     int daySeconds = 24 * 60 * 60;
+     //calculate integer type of days
+     NSInteger allDays = interval / daySeconds;
+
+    return [NSDate dateWithTimeIntervalSince1970:allDays * daySeconds];
+}
+
+-(NSString *)zz_ymd_ignoreDay{
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy-MM-dd"];
+    NSMutableString *str = [[format stringFromDate:self] mutableCopy];
+    [str replaceCharactersInRange:NSMakeRange(str.length - 2, 2) withString:@"01"];
+    return str;
+}
+
+-(NSString *)zz_ymd_ignoreYear{
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy-MM-dd"];
+    NSMutableString *str = [[format stringFromDate:self] mutableCopy];
+    [str replaceCharactersInRange:NSMakeRange(4, str.length - 4) withString:@"-01-01"];
+    return str;
+}
+
 /// 经典错误！其实世界时间都是格林威治时间加时差
 //-(NSDate *)addTimeZone{
 //    NSTimeZone *timeZone = [NSTimeZone systemTimeZone]; // 获取的是系统的时区

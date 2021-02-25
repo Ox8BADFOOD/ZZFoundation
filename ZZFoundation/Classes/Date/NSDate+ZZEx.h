@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 #define D_YEAR        31556926
 
 
+- (NSDate *)zz_ignoreTime;
+
+-(NSString *)zz_ymd_ignoreDay;
+
+-(NSString *)zz_ymd_ignoreYear;
+
 + (NSCalendar *) currentCalendar; // avoid bottlenecks
 
 /// 明天
