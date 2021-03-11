@@ -31,3 +31,17 @@ BOOL ZZ_best_Swizzle(Class aClass, SEL originalSel,SEL swizzleSel){
 
     return YES;
 }
+
+BOOL zz_best_swizzle_class(Class aClass, SEL originalSel,SEL swizzleSel){
+    
+    Method originalMethod = class_getClassMethod(aClass, originalSel);
+    Method swizzleMethod = class_getClassMethod(aClass, swizzleSel);
+    BOOL didAddMethod = class_addMethod(aClass, originalSel, method_getImplementation(swizzleMethod), method_getTypeEncoding(swizzleMethod));
+    if (didAddMethod) {
+        class_replaceMethod(aClass, swizzleSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    }else{
+        method_exchangeImplementations(originalMethod, swizzleMethod);
+    }
+
+    return YES;
+}

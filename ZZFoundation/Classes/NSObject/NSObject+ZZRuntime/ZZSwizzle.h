@@ -12,5 +12,5 @@ NS_ASSUME_NONNULL_BEGIN
 
 BOOL ZZ_simple_Swizzle(Class aClass, SEL originalSel,SEL swizzleSel);
 BOOL ZZ_best_Swizzle(Class aClass, SEL originalSel,SEL swizzleSel);
-
+BOOL zz_best_swizzle_class(Class aClass, SEL originalSel,SEL swizzleSel);
 NS_ASSUME_NONNULL_END
