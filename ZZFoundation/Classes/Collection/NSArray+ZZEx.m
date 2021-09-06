@@ -27,24 +27,19 @@
 -(NSString *)ZZJoin:(NSString *)separate{
     NSMutableString *str = [@"" mutableCopy];
     [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([obj isMemberOfClass:[NSString class]]) {
-            [str appendString:obj];
-            [str appendString:separate];
-        }
         
-        if ([obj isMemberOfClass:[NSNumber class]]) {
-            [str appendString:[obj stringValue]];
-            [str appendString:separate];
-        }
-        
-        if ([obj isMemberOfClass:[NSObject class]]) {
-            [str appendString:[obj description]];
-            [str appendString:separate];
-        }
-        
-        if ([obj isMemberOfClass:[NSValue class]]){
-            NSAssert(false, @"no implement");
-        }
+            if ([obj isKindOfClass:[NSString class]]) {
+                [str appendString:obj];
+                if (idx != self.count - 1) {[str appendString:separate];};
+            }else if ([obj isKindOfClass:[NSNumber class]]) {
+                [str appendString:[obj stringValue]];
+                if (idx != self.count - 1) {[str appendString:separate];};
+            }else  if ([obj isKindOfClass:[NSObject class]]) {
+                [str appendString:[obj description]];
+                if (idx != self.count - 1) {[str appendString:separate];};
+            }else  if ([obj isKindOfClass:[NSValue class]]){
+                NSAssert(false, @"no implement");
+            }
     }];
     return str;
 };
