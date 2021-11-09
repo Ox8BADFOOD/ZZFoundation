@@ -27,10 +27,50 @@
     return [pre evaluateWithObject:self];
 }
 
+-(BOOL)zz_checkAllInt{
+    if (self.length == 0)
+    return NO;
+    NSString *regex = @"^[0-9]+$";
+    return [self zz_validateByRegex:regex];
+}
+
+/*
+ if let t = text {
+     let pattern = "^[0-9]+([.]{0,1}[0-9]{0,2}){0,1}$"
+     do {
+             let regex = try NSRegularExpression(pattern: pattern,options: [])
+             let results = regex.matches(in: t, options: [],
+                                         range: NSRange(location: 0, length: t.count))
+             print(results.count)
+             if results.count != 0 {
+                 sf.weightField.text =  (t as NSString).substring(with: results[0].range)
+                 sf.oldValue = we
+             }else{
+                 sf.weightField.text = oldValue
+             }
+         } catch _ {
+             print("invalid regex: (error.localizedDescription)")
+         }
+ }
+ */
+-(BOOL)zz_checkAllNumberTwoDecimalPlaces{
+    if (self.length == 0)
+    return NO;
+    NSString *regex = @"^([0-9]+([.]{0,1}[0-9]{0,2}){0,1})?$";
+    return [self zz_validateByRegex:regex];
+}
+
 -(BOOL)zz_checkAllNumber{
     if (self.length == 0)
     return NO;
     NSString *regex = @"^[0-9]+([.]{0,1}[0-9]+){0,1}$";
+    return [self zz_validateByRegex:regex];
+}
+
+-(BOOL)zz_checkAllNumberContainNegative{
+    if (self.length == 0)
+    return NO;
+    NSString *regex = @"^[-]{0,1}[0-9]+([.]{0,1}[0-9]+){0,1}$";
     return [self zz_validateByRegex:regex];
 }
 

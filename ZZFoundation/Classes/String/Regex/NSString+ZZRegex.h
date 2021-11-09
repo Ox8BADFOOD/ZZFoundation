@@ -16,8 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否是有效的字符串 @"null"无效
 -(BOOL)zz_validateStr;
 
+/// 正整数
+-(BOOL)zz_checkAllInt;
+
+/// 小数点后两位
+-(BOOL)zz_checkAllNumberTwoDecimalPlaces;
 /// 是不是阿拉伯数字或小数点
 -(BOOL)zz_checkAllNumber;
+/// 是不是阿拉伯数字或小数点(包含负数)
+-(BOOL)zz_checkAllNumberContainNegative;
 
 /// 是否是中文
 - (BOOL)zz_checkAllChinese;
