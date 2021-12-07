@@ -13,5 +13,5 @@
 #import "NSString+ZZRegex.h"
 #import "NSString+ZZRect.h"
 #import "NSString+ZZAttribute.h"
-
+#import "NSString+NumberSystem.h"
 #endif /* ZZFoundation_String_h */
